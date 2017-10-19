@@ -6,4 +6,10 @@ export class UploadItem {
     withCredentials = false;
     alias: string = 'file';
     file: any = {};
+    
+    xhr: any = {};
+
+    abort(){
+        this.xhr.abort();
+    }
 }
