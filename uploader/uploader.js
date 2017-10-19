@@ -68,6 +68,9 @@ var Uploader = (function () {
         this.forEach(item.headers, function (name, value) {
             xhr.setRequestHeader(name, value);
         });
+        
+        item.xhr = xhr;
+        
         xhr.send(form);
     };
     Uploader.prototype.isSuccessStatus = function (status) {
