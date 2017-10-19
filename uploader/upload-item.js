@@ -9,6 +9,11 @@ var UploadItem = (function () {
         this.alias = 'file';
         this.file = {};
     }
+    
+    UploadItem.prototype.abort = function () {
+        this.xhr.abort();
+    };
+    
     return UploadItem;
 }());
 exports.UploadItem = UploadItem;
